@@ -1,0 +1,59 @@
+/* CUSTOM PROPORTY */
+:root {
+
+}
+/* FONT STYLES  */
+
+
+
+
+
+
+/* GLOBAL STYLES */
+  html {
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  *,
+  *::after,
+  *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+  }
+
+  *:focus {
+
+
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', 'Arial', sans-serif;
+    color: var(--text-color-light);
+    background-color: var(--main-bg);
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1340px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .main-content{
+    flex-grow: 1;
+  }
