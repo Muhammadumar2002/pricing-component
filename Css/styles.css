@@ -1,13 +1,17 @@
 /* CUSTOM PROPORTY */
 :root {
+--text-color:#6E728E;
 
 }
 /* FONT STYLES  */
-
-
-
-
-
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../Fonts/Montserrat-Bold.woff2') format('woff2'),
+      url('../Fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* GLOBAL STYLES */
   html {
@@ -20,33 +24,70 @@
   *::before {
     padding: 0;
     margin: 0;
+    list-style: none;
     box-sizing: inherit;
   }
 
-  *:focus {
-
-
-  }
   body {
     display: flex;
     flex-direction: column;
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Nunito Sans', 'Arial', sans-serif;
-    color: var(--text-color-light);
-    background-color: var(--main-bg);
-    line-height: 16px;
-    font-size: 14px;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    line-height: 28px;
+    font-size: 15px;
+    background-color:#f7f7fe ;
+    background-repeat: no-repeat;
   }
 
   .container {
     width: 100%;
-    max-width: 1340px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 110px;
+    padding-left: 25px;
+    padding-right: 25px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0;
+    margin:0;
+    border: 1px solid transparent;
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    transition: background-color 0.4s ease,
+    color 0.4s;
+  }
+  .button-block {
+    display: block;
+    width: 100%;
+  }
+  .button-primary {
+    background-color:#696EDD;
+    color: #fff;
+  }
+
+  .button-primary:hover{
+    background-color:#fff;
+    background-image: none;
+    color:#6D72DE;
+    border-color: #6D72DE;
+  }
+  .button-white {
+    background-color:#fff;
+    color: #696EDD;
+  }
+
+  .button-white:hover{
+    border-color:#fff;
+    background-color: transparent;
+    color: #fff;
   }
 
   img{
@@ -54,6 +95,105 @@
     height: auto;
   }
 
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
   .main-content{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top: 71px;
+    padding-bottom: 70px;
     flex-grow: 1;
+    background-color:hsl(0, 0%, 95%);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .bg-left{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .bg-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .site-header-heading {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: var(--text-color);
+    text-align: center;
+  }
+  .pricing {
+    width: 100%;
+  }
+  .pricing-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .pricing-plan {
+  flex-grow: 1;
+  max-width: 350;
+  padding: 32px;
+  background-color: #fff;
+  text-align: center;
+  }
+  .pricing-plan:first-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px ;
+  }
+  .pricing-plan:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px ;
+  }
+  .pricing-plan-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 28px ;
+  }
+  .pricing-plan-price {
+    display: flex;
+    align-items:center;
+    margin-bottom: 32px;
+    font-size: 72px;
+    line-height: 72px;
+  }
+  .pricing-plan-currency {
+    margin-right: 8px;
+    line-height: 40px;
+    font-size: 40px;
+
+  }
+  .pricing-plan-features {
+    border-top: 1px solid #6E728E;
+  }
+  .pricing-plan-feature {
+    padding: 12px;
+    border-bottom: 1px solid #6E728E;
+  }
+  .pricing-plan-best {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    border-radius: 10px;
+    background-color:#6D72DE;
+    background-image: linear-gradient(135.06deg,#A2A7F0 -0.05% #6D72DE 100.05% );
+    color: #fff;
   }
